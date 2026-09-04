@@ -1,0 +1,206 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    background-image: url("imagenes/fondo.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+}
+
+.contenedor {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.tarjeta {
+    width: 430px;
+    max-width: 95%;
+
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+    /* Animación de entrada */
+    animation: aparecer 1.5s ease;
+}
+
+h1 {
+    font-size: 28px;
+    color: #444141;
+
+
+    padding: 5px 10px;
+
+    display: inline-block;
+
+    border-radius: 4px;
+
+    margin-bottom: 15px;
+
+    animation: deslizar 1s ease;
+}
+
+.bienvenida {
+    font-family: "Brush Script MT", cursive;
+
+    font-size: 38px;
+
+    color: #238c82;
+
+    margin-bottom: 20px;
+
+    animation: flotar 2s infinite alternate;
+}
+
+.imagen {
+    width: 100%;
+
+    max-height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.imagen:hover {
+    transform: scale(1.04);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.video {
+    width: 100%;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+
+    background: black;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+button {
+    background: #2878d4;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #155da8;
+
+    transform: scale(1.08);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#mensaje {
+    margin-top: 15px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #238c82;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes deslizar {
+
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes flotar {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .tarjeta {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .bienvenida {
+        font-size: 32px;
+    }
+
+}
